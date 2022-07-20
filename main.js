@@ -15,7 +15,7 @@ var app = http.createServer(function(request, response){
     }
     response.writeHead(200);
     var title = query_data.id
-    fs.readFile(`data/${title}`, 'utf-8', function(err, description){
+    fs.readFile(`data/${title}.md`, 'utf-8', function(err, description){
         var template = `
             <!doctype html>
             <html>
